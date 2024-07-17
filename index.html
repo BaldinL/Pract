@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оренда авто</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Оренда авто</h1>
+    </header>
+    <main>
+        <section id="cars">
+            <h2>Наші авто</h2>
+            <div class="car" data-id="1">
+                <img src="https://cdn0.riastatic.com/photosnew/auto/photo/volkswagen_passat__535938060hd.webp" alt="Авто 1">
+                <h3>Volkswagen Passat 2007</h3>
+                <button onclick="showCarDetails(1)">Деталі</button>
+            </div>
+            <div class="car" data-id="2">
+                <img src="https://cdn.riastatic.com/photosnewr/auto/new_auto_storage/mg-4__2051244-620x465x72.webp" alt="Авто 2">
+                <h3>MG 4 EV 64 kWh</h3>
+                <button onclick="showCarDetails(2)">Деталі</button>
+            </div>
+            <div class="car" data-id="3">
+                <img src="https://cdn2.riastatic.com/photosnew/auto/photo/byd_seagull__555501512hd.webp" alt="Авто 3">
+                <h3>BYD Seagull Flying 2023</h3>
+                <button onclick="showCarDetails(3)">Деталі</button>
+            </div>
+            <div class="car" data-id="4">
+                <img src="https://cdn3.riastatic.com/photosnew/auto/photo/volkswagen_tiguan__553305423hd.webp" alt="Авто 4">
+                <h3>Volkswagen Tiguan 2012</h3>
+                <button onclick="showCarDetails(4)">Деталі</button>
+            </div>
+        </section>
+        <section id="car-details" class="hidden">
+            <h2>Деталі авто</h2>
+            <div id="details-content"></div>
+            <button onclick="backToList()">Назад</button>
+        </section>
+        <section id="order">
+            <h2>Замовлення авто</h2>
+            <form onsubmit="calculateCost(event)">
+                <label for="car-select">Виберіть авто:</label>
+                <select id="car-select">
+                    <option value="1">Авто 1</option>
+                    <option value="2">Авто 2</option>
+                    <option value="3">Авто 3</option>
+                    <option value="4">Авто 4</option>
+                </select>
+                <label for="days">Кількість днів:</label>
+                <input type="number" id="days" min="1" required>
+                <button type="submit">Розрахувати вартість</button>
+            </form>
+            <div id="cost-result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
