@@ -1,10 +1,10 @@
-// script.js
+
 const cars = [
     { id: 1, name: 'Авто 1', pricePerDay: 500, description: 'Опис авто 1' },
     { id: 2, name: 'Авто 2', pricePerDay: 600, description: 'Опис авто 2' },
     { id: 3, name: 'Авто 3', pricePerDay: 450, description: 'Опис авто 3' },
     { id: 4, name: 'Авто 4', pricePerDay: 700, description: 'Опис авто 4' },
-    // Додати ще 4 авто аналогічним чином
+
 ];
 
 function showCarDetails(carId) {
